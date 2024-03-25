@@ -2,17 +2,25 @@ import { baseUrl } from '../apiConfigs';
 
 export async function getPricing() {
   try {
-    const response = fetch(`${baseUrl}/price/getAllPricing`, {
+    const response = await fetch(`${baseUrl}/price/getAllPricing`, {
       method: 'GET',
     });
 
-    if (!response.ok) {
-      throw new Error('Something went wrong');
-    }
-
     const data = await response.json();
 
-    console.log(data.data);
+    return data.data.data;
+  } catch (error) {
+    throw new Error(error);
+  }
+}
+
+export async function deletePricing(id) {
+  try {
+    const response = await fetch(`${baseUrl}/price/deletePricing/${id}`, {
+      method: 'DELETE',
+    });
+
+    const data = await response.json();
 
     return data;
   } catch (error) {
