@@ -70,7 +70,7 @@ function OrdersTable() {
         <a
           target="_blank"
           rel="noreferrer"
-          href={`https://ideal-writer.onrender.com/images/content/${attachment}`}
+          href={`https://ideal-writer-9plq.onrender.com/images/content/${attachment}`}
           download
         >
           Download
