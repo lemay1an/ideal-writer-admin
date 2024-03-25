@@ -21,7 +21,7 @@ const IconText = ({ icon, text }) => (
 
 function BlogsPage() {
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const { blogs, isLoading, error } = useBlogs();
+  const { blogs, isLoading } = useBlogs();
   const { createBlogAPI } = useCreateBlogs();
   const { deleteBlogAPI, isDeleting } = useDeleteBlog();
 
@@ -86,6 +86,7 @@ function BlogsPage() {
                 <IconText icon={ShareAltOutlined} text={item?.shareCount} key="list-vertical-star-o" />,
                 <IconText icon={LikeOutlined} text={item?.likes} key="list-vertical-like-o" />,
                 <button
+                  disabled={isDeleting}
                   style={{
                     cursor: 'pointer',
                     outline: 'none',

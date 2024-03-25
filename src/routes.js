@@ -6,6 +6,7 @@ import LoginPage from './pages/LoginPage';
 import ProductsPage from './pages/ProductsPage';
 import DashboardAppPage from './pages/DashboardAppPage';
 import BlogsPage from './pages/BlogsPage';
+import PricingPage from './pages/PricingPage';
 
 export default function Router() {
   const routes = useRoutes([
@@ -26,7 +27,7 @@ export default function Router() {
         { path: 'user', element: <UserPage /> },
         { path: 'settings', element: <BlogPage /> },
         { path: 'blogs', element: <BlogsPage /> },
-        { path: 'pricing', element: <BlogsPage /> },
+        { path: 'pricing', element: <PricingPage /> },
         { path: 'queries', element: <BlogsPage /> },
       ],
     },
