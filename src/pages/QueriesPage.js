@@ -68,7 +68,7 @@ function QueriesPage() {
           </Typography>
         </Stack>
         <div style={{ marginTop: '3rem' }} />
-        <Table dataSource={dataSource} columns={columns} />;
+        <Table dataSource={dataSource} columns={columns} />
       </Container>
     </>
   );
