@@ -1,13 +1,9 @@
 import { useState } from 'react';
-import toast from 'react-hot-toast';
 /* eslint-disable import/no-unresolved */
 import { Button, Spin, Table, Tag, Modal, Select } from 'antd';
 import { TextField } from '@mui/material';
 import { useDelete } from './useDelete';
 import { useOrders } from './useOrders';
-import { capitalizeString } from '../../utils/formatString';
-import { dollarUSLocale } from '../../utils/formatMoney';
-import { useSettings } from '../../hooks/useSettings';
 import { useEditOrder } from '../../hooks/useEditOrder';
 import { usePayment } from '../../hooks/usePayment';
 

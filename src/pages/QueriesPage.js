@@ -5,7 +5,7 @@ import { useContacts } from '../hooks/queries/useContacts';
 import { useDeleteQuery } from '../hooks/queries/useDeleteQueries';
 
 function QueriesPage() {
-  const { queries, isLoading } = useContacts();
+  const { queries } = useContacts();
   const { deleteQueryAPI, deletingQuery } = useDeleteQuery();
 
   const dataSource = queries?.map((query) => ({
