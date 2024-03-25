@@ -17,3 +17,14 @@ export async function getQueries() {
     throw new Error(error);
   }
 }
+
+export async function deleteQuery(id) {
+  console.log(id);
+  try {
+    await fetch(`${baseUrl}/contact/deleteContact/${id}`, {
+      method: 'DELETE',
+    });
+  } catch (error) {
+    throw new Error(error);
+  }
+}
