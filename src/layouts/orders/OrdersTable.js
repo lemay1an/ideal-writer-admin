@@ -69,9 +69,9 @@ function OrdersTable() {
       render: (attachment) => (
         <a
           target="_blank"
-          rel="noreferrer"
           href={`https://ideal-writer-9plq.onrender.com/images/content/${attachment}`}
           download
+          rel="noreferrer"
         >
           Download
         </a>
