@@ -6,17 +6,10 @@ import { Grid, Container, Typography } from '@mui/material';
 import { Spin } from 'antd';
 // sections
 import { AppCurrentVisits, AppWebsiteVisits, AppWidgetSummary } from '../sections/@dashboard/app';
-import { useRecentBookings } from '../hooks/useRecentBookings';
 import { useUsers } from '../hooks/useUsers';
-import { useRecentUsers } from '../hooks/useRecentUsers';
-import { useCurrentUser } from '../hooks/useCurrentUser';
-import { useAppState } from '../context/userContext';
 import { useOrders } from '../layouts/orders/useOrders';
 
-// ----------------------------------------------------------------------
-
 export default function DashboardAppPage() {
-  const { user } = useAppState();
   const theme = useTheme();
   // const { data: recentOrders, isLoading } = useRecentBookings();
   const { data: users, isLoading: loadingUsers } = useUsers();
@@ -24,11 +17,9 @@ export default function DashboardAppPage() {
 
   //  Filter data
   const confirmedOrders = orders?.filter((order) => order?.active === true);
-  console.log(confirmedOrders?.length);
 
   // Total Revenue of confirmed ordes
   const totalRevenue = (confirmedOrders?.length / orders?.length) * 100;
-  console.log(totalRevenue);
 
   if (isLoading || loadingUsers)
     return (
